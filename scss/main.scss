@@ -1,0 +1,20 @@
+//コンテンツブロック
+.form-editor {
+    > div {
+        &:nth-child( 1 ) {
+            background-color: #f00;
+        }
+        &:nth-child( 2 ) {
+            background-color: #0f0;
+        }
+        &:nth-child( 3 ) {
+            background-color: #00f;
+        }
+        &:nth-child( 4 ) {
+            background-color: #ff0;
+        }
+    }
+    .section-form {
+        background-color: #0ff;
+    }
+}
