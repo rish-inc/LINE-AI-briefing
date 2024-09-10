@@ -1,0 +1,283 @@
+@use './lstep';
+@use './global' as g;
+@use './disp';
+
+$red: #9E1424;
+
+%mark-headline {
+    font-size: 24px;
+    margin-bottom: 24px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    line-height: 1.6;
+    white-space: nowrap;
+    &::before,
+    &::after {
+        content: "";
+        width: 58px;
+        height: 58px;
+        background-image: url( https://raw.githubusercontent.com/rish-inc/LINE-AI-briefing/main/img/mark_headline.png );
+        background-size: cover;
+        display: block;
+        position: static;
+        @include g.breakpoint( spmin ) {
+            width: 58px;
+            height: 58px;
+            position: absolute;
+        }
+        @include g.breakpoint( tablet ) {
+            width: 40px;
+            height: 40px;
+        }
+        @include g.breakpoint( pc ) {
+            width: 58px;
+            height: 58px;
+        }
+    }
+    &::before {
+        margin-right: 8px;
+        @include g.breakpoint( spmin ) {
+            left: 0;
+        }
+        @include g.breakpoint( tablet ) {
+            margin-right: 0;
+        }
+    }
+    &::after {
+        transform: rotate( 180deg );
+        margin-top: 8px;
+        margin-left: 8px;
+        @include g.breakpoint( spmin ) {
+            right: 0;
+        }
+        @include g.breakpoint( tablet ) {
+            margin-left: 0;
+        }
+    }
+    @include g.breakpoint( tablet ) {
+        
+    }
+    @include g.breakpoint( pc ) {
+        font-size: 32px;
+        margin-bottom: 48px;
+    }
+}
+
+%form-label {
+    width: 90%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 4px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    border-bottom: 1px solid white;
+    float: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.form-top {
+    padding: 0;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 4px 4px 0 0;
+    text-align: left;
+    .form-top-left {
+        float: left;
+        min-height: 100px;
+        width: 100%;
+        padding-top: 25px;
+        z-index: 1;
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        h3 {
+            display: none;
+        }
+    }
+    .form-top-right {
+        position: absolute;
+        right: 40px;
+        padding-top: 5px;
+        font-size: 66px;
+        color: #ddd;
+        line-height: 100px;
+        text-align: right;
+        display: none;
+    }
+}
+
+.form-bottom {
+    padding: 0 0 72px;
+    background-image: url( https://raw.githubusercontent.com/rish-inc/LINE-AI-briefing/main/img/bg_prism.png );
+    background-repeat: repeat;
+}
+
+//コンテンツブロック
+.form-editor {
+    > div {
+        &:nth-child( 1 ) {
+            .description-image {
+                width: 100%;
+                margin-bottom: 0;
+            }
+        }
+        &:nth-child( 2 ) {
+            padding: 0;
+        }
+        &:nth-child( 3 ) {
+            padding: 0;
+        }
+        &:nth-child( 4 ) {
+            padding: 0;
+        }
+        &:nth-child( 5 ) {
+            padding: 0;
+            & > .form-group {
+                & > .form-text {
+                    & > div {
+                        width: 100%;
+                        padding: 48px 32px 24px;
+                        > span {
+                            > div {
+                                margin-bottom: 32px;
+                            }
+                            &+span {
+                                font-size: 18px;
+                                color: #B9B9B9;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &:nth-child( 6 ),
+        &:nth-child( 7 ),
+        &:nth-child( 8 ) {
+            & > .form-group {
+                & > .form-text {
+                    .control-label,
+                    .control-label + .col-sm-8,
+                    .description-image,
+                    .description-title, p {
+                        background-color: transparent;
+                    }
+                    & > label {
+                        @extend %form-label;
+                        color: white;
+                        font-weight: bold;
+                    }
+                    & > .col-sm-8 {
+                        padding: 0;
+                    }
+                    label.control-label span.label-danger {
+                        margin-left: 8px;
+                        padding: 4px 6px;
+                        background-color: $red;
+                    }
+
+                    .help-block {
+                        line-height: 1.5;
+                        color: #B9B9B9;
+                        font-size: 16px;
+                    }
+                    .checkbox,
+                    .radio {
+                        color: white;
+                    }
+                    .radio input[type=radio],
+                    input[type=radio] {
+                        margin-right: 8px;
+                    }
+                    .radio input[type=radio]:before,
+                    input[type=radio]:before {
+                        background-color: #D9D9D9;
+                        border-radius: 100%;
+                    }
+                    .radio input[type=radio]:after,
+                    input[type=radio]:after {
+                        border: 2px solid #ACACAC;
+                        background: black;
+                        border-radius: 100%;
+                        top: -1px;
+                    }
+                    .radio input[type=radio]:checked:before,
+                    input[type=radio]:checked:before {
+                    }
+                    .radio input[type=radio]:checked:after,
+                    input[type=radio]:checked:after {
+                        background-color: #D9D9D9;
+                    }
+                }
+                & > div {
+    
+                }
+            }
+        }
+    }
+}
+
+.btn {
+	cursor: pointer;
+	display: grid;
+	place-items: center;
+	&.btn-primary {
+		width: 88%;
+        height: 73px;
+        margin-inline: auto;
+        border: 2px solid white;
+        border-radius: 80px;
+		background-color: $red;
+        font-weight: bold;
+        box-shadow: 0px 10px 10px -6px rgba( 255, 255, 255, 0.3 );
+        position: relative;
+        top: 0;
+        transition: all ease-in .2s;
+        cursor: pointer;
+        @include g.breakpoint( tablet ) {
+            width: 100%;
+        }
+        &:hover {
+            position: relative;
+            background-color: #D14353;
+            cursor: pointer;
+            box-shadow: none;
+            top: 3px;
+        }
+	}
+}
+
+.form-editor > div:nth-child(1)::before {
+    display: none;
+}
+
+.description-image {
+    padding: 0;
+    background-color: transparent;
+}
+
+.has-success .checkbox, .has-success .checkbox-inline, .has-success.checkbox-inline label, .has-success.checkbox label, .has-success .control-label, .has-success .help-block, .has-success .radio, .has-success .radio-inline, .has-success.radio-inline label, .has-success.radio label {
+    color: $red;
+}
+
+.radio input[type=radio], .radio-inline input[type=radio], input[type=radio] {
+    margin-top: 4px;
+}
