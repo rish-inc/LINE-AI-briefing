@@ -142,12 +142,48 @@ body {
         }
         &:nth-child( 2 ) {
             padding: 0;
+            background: url( https://raw.githubusercontent.com/rish-inc/LINE-AI-briefing/main/0910/publish/sec1_sp.png ) no-repeat;
+            background-size: 100%;
+            aspect-ratio: 265 / 596;
+            img {
+                display: none;
+            }
+            @include g.breakpoint( tablet ) {
+                aspect-ratio: initial;
+                img {
+                    display: block;
+                }
+            }
         }
         &:nth-child( 3 ) {
             padding: 0;
+            background: url( https://raw.githubusercontent.com/rish-inc/LINE-AI-briefing/main/0910/publish/sec2_sp.png ) no-repeat;
+            background-size: 100%;
+            aspect-ratio: 265 / 517;
+            img {
+                display: none;
+            }
+            @include g.breakpoint( tablet ) {
+                aspect-ratio: initial;
+                img {
+                    display: block;
+                }
+            }
         }
         &:nth-child( 4 ) {
             padding: 0;
+            background: url( https://raw.githubusercontent.com/rish-inc/LINE-AI-briefing/main/0910/publish/sec3_sp.png ) no-repeat;
+            background-size: 100%;
+            aspect-ratio: 530 / 1497;
+            img {
+                display: none;
+            }
+            @include g.breakpoint( tablet ) {
+                aspect-ratio: initial;
+                img {
+                    display: block;
+                }
+            }
         }
         &:nth-child( 5 ) {
             padding: 0;

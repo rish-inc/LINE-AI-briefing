@@ -546,12 +546,54 @@ body {
 }
 .form-editor > div:nth-child(2) {
   padding: 0;
+  background: url(https://raw.githubusercontent.com/rish-inc/LINE-AI-briefing/main/0910/publish/sec1_sp.png) no-repeat;
+  background-size: 100%;
+  aspect-ratio: 265/596;
+}
+.form-editor > div:nth-child(2) img {
+  display: none;
+}
+@media (min-width: 768px) {
+  .form-editor > div:nth-child(2) {
+    aspect-ratio: initial;
+  }
+  .form-editor > div:nth-child(2) img {
+    display: block;
+  }
 }
 .form-editor > div:nth-child(3) {
   padding: 0;
+  background: url(https://raw.githubusercontent.com/rish-inc/LINE-AI-briefing/main/0910/publish/sec2_sp.png) no-repeat;
+  background-size: 100%;
+  aspect-ratio: 265/517;
+}
+.form-editor > div:nth-child(3) img {
+  display: none;
+}
+@media (min-width: 768px) {
+  .form-editor > div:nth-child(3) {
+    aspect-ratio: initial;
+  }
+  .form-editor > div:nth-child(3) img {
+    display: block;
+  }
 }
 .form-editor > div:nth-child(4) {
   padding: 0;
+  background: url(https://raw.githubusercontent.com/rish-inc/LINE-AI-briefing/main/0910/publish/sec3_sp.png) no-repeat;
+  background-size: 100%;
+  aspect-ratio: 530/1497;
+}
+.form-editor > div:nth-child(4) img {
+  display: none;
+}
+@media (min-width: 768px) {
+  .form-editor > div:nth-child(4) {
+    aspect-ratio: initial;
+  }
+  .form-editor > div:nth-child(4) img {
+    display: block;
+  }
 }
 .form-editor > div:nth-child(5) {
   padding: 0;
