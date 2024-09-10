@@ -1,0 +1,31 @@
+@use './global' as g;
+
+.disp {
+    &--sp {
+        display: block;
+        @include g.breakpoint( tablet ) {
+            display: none;
+        }
+    }
+    &--tablet {
+        display: none;
+        @include g.breakpoint( tablet ) {
+            display: block;
+        }
+    }
+    &--sp-tablet {
+        display: block;
+        @include g.breakpoint( tablet ) {
+            display: block;
+        }
+        @include g.breakpoint( pc ) {
+            display: none;
+        }
+    }
+    &--pc {
+        display: none;
+        @include g.breakpoint( pc ) {
+            display: block;
+        }
+    }
+}
