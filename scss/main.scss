@@ -17,13 +17,15 @@ $red: #9E1424;
     &::before,
     &::after {
         content: "";
-        width: 32px;
-        height: 32px;
-        background-image: url( ../img/mark_headline.png );
+        width: 58px;
+        height: 58px;
+        background-image: url( //dev.rish.style/0910/mark_headline.png );
         background-size: cover;
         display: block;
         position: static;
         @include g.breakpoint( spmin ) {
+            width: 58px;
+            height: 58px;
             position: absolute;
         }
         @include g.breakpoint( tablet ) {
@@ -33,13 +35,12 @@ $red: #9E1424;
         @include g.breakpoint( pc ) {
             width: 58px;
             height: 58px;
-        
         }
     }
     &::before {
         margin-right: 8px;
         @include g.breakpoint( spmin ) {
-            left: 16px;
+            left: 0;
         }
         @include g.breakpoint( tablet ) {
             margin-right: 0;
@@ -50,7 +51,7 @@ $red: #9E1424;
         margin-top: 8px;
         margin-left: 8px;
         @include g.breakpoint( spmin ) {
-            right: 16px;
+            right: 0;
         }
         @include g.breakpoint( tablet ) {
             margin-left: 0;
@@ -125,7 +126,7 @@ body {
 
 .form-bottom {
     padding: 0 0 72px;
-    background-image: url( ../img/bg_prism.png );
+    background-image: url( //dev.rish.style/0910/bg_prism.png );
     background-repeat: repeat;
 }
 
@@ -139,7 +140,7 @@ body {
         }
         &:nth-child( 2 ) {
             padding: 72px 32px;
-            background-image: url( ../img/bg_triangle.png );
+            background-image: url( //dev.rish.style/0910/bg_triangle.png );
             background-repeat: repeat;
             border: 20px solid black;
             border-left: 0;
@@ -147,7 +148,7 @@ body {
             position: relative;
             z-index: 0;
             ul {
-                list-style-image: url( ../img/list_pentagon.png );
+                list-style-image: url( //dev.rish.style/0910/list_pentagon.png );
                 inline-size: fit-content;
                 margin-inline: auto;
                 margin-bottom: 48px;
@@ -200,7 +201,7 @@ body {
             }
             &::after {
                 content: "";
-                background-image: url( ../img/bg_curve.svg );
+                background-image: url( //dev.rish.style/0910/bg_curve.svg );
                 background-repeat: no-repeat;
                 background-size: auto 110%;
                 background-position: center center;
@@ -251,7 +252,7 @@ body {
         }
         &:nth-child( 4 ) {
             padding: 72px 32px;
-            background-image: url( ../img/bg_triangle.png );
+            background-image: url( //dev.rish.style/0910/bg_triangle.png );
             color: black;
             @include g.breakpoint( pc ) {
                 padding-inline: 80px;

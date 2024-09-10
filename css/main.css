@@ -51,15 +51,17 @@
 }
 .form-editor .section-form h2::before, .form-editor > div:nth-child(3) h2::before, .form-editor .section-form h2::after, .form-editor > div:nth-child(3) h2::after {
   content: "";
-  width: 32px;
-  height: 32px;
-  background-image: url(../img/mark_headline.png);
+  width: 58px;
+  height: 58px;
+  background-image: url(//dev.rish.style/0910/mark_headline.png);
   background-size: cover;
   display: block;
   position: static;
 }
 @media (max-width: 320px) {
   .form-editor .section-form h2::before, .form-editor > div:nth-child(3) h2::before, .form-editor .section-form h2::after, .form-editor > div:nth-child(3) h2::after {
+    width: 58px;
+    height: 58px;
     position: absolute;
   }
 }
@@ -80,7 +82,7 @@
 }
 @media (max-width: 320px) {
   .form-editor .section-form h2::before, .form-editor > div:nth-child(3) h2::before {
-    left: 16px;
+    left: 0;
   }
 }
 @media (min-width: 768px) {
@@ -95,7 +97,7 @@
 }
 @media (max-width: 320px) {
   .form-editor .section-form h2::after, .form-editor > div:nth-child(3) h2::after {
-    right: 16px;
+    right: 0;
   }
 }
 @media (min-width: 768px) {
@@ -168,7 +170,7 @@ body {
 
 .form-bottom {
   padding: 0 0 72px;
-  background-image: url(../img/bg_prism.png);
+  background-image: url(//dev.rish.style/0910/bg_prism.png);
   background-repeat: repeat;
 }
 
@@ -177,7 +179,7 @@ body {
 }
 .form-editor > div:nth-child(2) {
   padding: 72px 32px;
-  background-image: url(../img/bg_triangle.png);
+  background-image: url(//dev.rish.style/0910/bg_triangle.png);
   background-repeat: repeat;
   border: 20px solid black;
   border-left: 0;
@@ -186,7 +188,7 @@ body {
   z-index: 0;
 }
 .form-editor > div:nth-child(2) ul {
-  list-style-image: url(../img/list_pentagon.png);
+  list-style-image: url(//dev.rish.style/0910/list_pentagon.png);
   inline-size: -webkit-fit-content;
   inline-size: -moz-fit-content;
   inline-size: fit-content;
@@ -245,7 +247,7 @@ body {
 }
 .form-editor > div:nth-child(2)::after {
   content: "";
-  background-image: url(../img/bg_curve.svg);
+  background-image: url(//dev.rish.style/0910/bg_curve.svg);
   background-repeat: no-repeat;
   background-size: auto 110%;
   background-position: center center;
@@ -298,7 +300,7 @@ body {
 }
 .form-editor > div:nth-child(4) {
   padding: 72px 32px;
-  background-image: url(../img/bg_triangle.png);
+  background-image: url(//dev.rish.style/0910/bg_triangle.png);
   color: black;
 }
 @media (min-width: 992px) {
