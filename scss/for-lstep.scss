@@ -187,6 +187,21 @@ body {
         }
         &:nth-child( 5 ) {
             padding: 0;
+            background: url( https://raw.githubusercontent.com/rish-inc/LINE-AI-briefing/main/0910/publish/sec4_sp.png ) no-repeat;
+            background-size: 100%;
+            aspect-ratio: 530 / 644;
+            img {
+                display: none;
+            }
+            @include g.breakpoint( tablet ) {
+                aspect-ratio: initial;
+                img {
+                    display: block;
+                }
+            }
+        }
+        &:nth-child( 6 ) {
+            padding: 0;
             & > .form-group {
                 & > .form-text {
                     & > div {
@@ -205,9 +220,9 @@ body {
                 }
             }
         }
-        &:nth-child( 6 ),
         &:nth-child( 7 ),
-        &:nth-child( 8 ) {
+        &:nth-child( 8 ),
+        &:nth-child( 9 ) {
             & > .form-group {
                 & > .form-text {
                     .control-label,
